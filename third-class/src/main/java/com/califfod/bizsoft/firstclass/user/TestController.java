@@ -1,4 +1,4 @@
-package com.califfod.bizsoft.firstclass;
+package com.califfod.bizsoft.firstclass.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
