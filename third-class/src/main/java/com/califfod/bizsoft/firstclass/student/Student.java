@@ -1,10 +1,10 @@
 package com.califfod.bizsoft.firstclass.student;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.califfod.bizsoft.firstclass.user.User;
+import jakarta.persistence.*;
 import lombok.Data;
+
+import java.util.Date;
 
 @Entity
 @Data
@@ -16,5 +16,13 @@ public class Student {
 
     private String name;
 
-    private Integer userId;
+    @OneToOne
+    @JoinColumn(nullable = false)
+    private User user;
+
+    @Column(updatable = false)
+    private Date createOn;
+
+    @Column(insertable = false)
+    private Date updateOn;
 }
